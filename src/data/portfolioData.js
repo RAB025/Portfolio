@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Raza Ayoub",
   role: "Senior Technical Lead & Full-Stack Engineer",
   tagline: "Building resilient enterprise systems, high-speed browser automation, and AI-driven intelligence pipelines.",
-  email: "rzbb9@gmail.com",
+  email: "rzbb90988@gmail.com",
   github: "https://github.com/RAB025",
   githubHandle: "RAB025",
   linkedin: "https://linkedin.com/in/raza-ayoub-466020196",
