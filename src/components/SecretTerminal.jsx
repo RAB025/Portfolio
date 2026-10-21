@@ -62,9 +62,10 @@ export const SecretTerminal = () => {
 
       case 'projects':
         response = [
-          { text: "1. DATA AUTOMATION CHROME EXTENSION: Slashed healthcare task time by 60% (~60s to ~20s) bypassing Vue.js boundaries.", type: "output" },
-          { text: "2. SECURITY RISK INTELLIGENCE: 65K+ records, NetworkX graph communities & LLM explainability.", type: "output" },
-          { text: "3. LEGAL CASE MANAGEMENT SYSTEM: React + Django, automated cause list, custom react-pdf viewer, ReportLab.", type: "output" }
+          { text: "1. TIME-SERIES TRANSIENT SPECTRAL CLASSIFICATION (IUST Awantipora): ML pipeline for X-ray binaries via Gaussian Processes, 1D-CNN/LSTM & XGBoost.", type: "output" },
+          { text: "2. DATA AUTOMATION CHROME EXTENSION: Slashed healthcare task time by 60% (~60s to ~20s) bypassing Vue.js boundaries.", type: "output" },
+          { text: "3. SECURITY RISK INTELLIGENCE: 65K+ records, NetworkX graph communities & LLM explainability.", type: "output" },
+          { text: "4. LEGAL CASE MANAGEMENT SYSTEM: React + Django, automated cause list, custom react-pdf viewer, ReportLab.", type: "output" }
         ];
         break;
 

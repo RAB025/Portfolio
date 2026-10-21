@@ -11,6 +11,7 @@ A vibrant, neo-brutalist, and interactive multi-page portfolio website showcasin
 
 ## 🚀 Key Highlights & Interactive Features
 
+- **Transient Spectral State & Light Curve Pipeline**: Machine Learning pipeline for X-ray binary transient sources in collaboration with an Assistant Professor at IUST Awantipora, J&K (Gaussian Processes, 1D-CNNs, LSTMs, XGBoost, and PSD feature extraction).
 - **Vue.js DOM-Polling Benchmark Simulator**: Live interactive simulation showing how Raza's custom Chrome Extension overcame Vue reactivity barriers, slashing task execution times from ~60s down to ~20s (60% speedup).
 - **65K+ Security Records Graph Explorer**: Interactive NetworkX community cluster explorer with LLM explainability diagnostics.
 - **Full-Stack Legal Case Management Architecture**: Interactive pipeline showcasing cause list automation, ReportLab printable PDFs, and RBAC delegations.
@@ -56,6 +57,6 @@ A vibrant, neo-brutalist, and interactive multi-page portfolio website showcasin
 
 ## 📬 Connect with Raza
 
-- **Email**: [rzbb9@gmail.com](mailto:rzbb9@gmail.com)
+- **Email**: [rzbb90988@gmail.com](mailto:rzbb90988@gmail.com)
 - **GitHub**: [@RAB025](https://github.com/RAB025)
 - **LinkedIn**: [raza-ayoub-466020196](https://linkedin.com/in/raza-ayoub-466020196)

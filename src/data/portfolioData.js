@@ -26,7 +26,8 @@ export const personalInfo = {
     "☕ Converted coffee into scalable Python & Java backends at HCL Tech.",
     "🔍 Uses NetworkX graphs to find anomalous clusters lurking in massive security datasets.",
     "📜 Generated pixel-perfect legal docs using ReportLab while taming complex conditional logic.",
-    "🤖 Vertex AI Certified geek exploring the frontier of explainable LLM reasoning."
+    "🤖 Vertex AI Certified geek exploring the frontier of explainable LLM reasoning.",
+    "🔭 Modeling transient light curves & spectral states of X-ray binaries with an Asst. Professor at IUST Awantipora."
   ]
 };
 
@@ -63,6 +64,10 @@ export const skillsData = {
     { name: "OIDC", tag: "Secure Auth Protocol" }
   ],
   aiData: [
+    { name: "Time-Series Analysis", tag: "Light Curves & GPs" },
+    { name: "TensorFlow & PyTorch", tag: "1D-CNNs & LSTMs" },
+    { name: "XGBoost & Scikit-Learn", tag: "Tree Models & SMOTE" },
+    { name: "Signal Processing (PSD)", tag: "Frequency & Hardness Ratios" },
     { name: "Google Vertex AI", tag: "Certified 2025" },
     { name: "Pandas & NumPy", tag: "65K+ Data Pipelines" },
     { name: "NetworkX", tag: "Graph & Community Detection" },
@@ -80,6 +85,26 @@ export const skillsData = {
 };
 
 export const experienceData = [
+  {
+    id: "iust-astrophysics-ml",
+    role: "Machine Learning Researcher / Engineer",
+    company: "Islamic University of Science & Technology (IUST)",
+    period: "Research Collaboration",
+    badge: "Astrophysics & ML 🌌",
+    badgeColor: "bg-[#9D4EDD] text-white",
+    location: "Awantipora, Jammu & Kashmir",
+    affiliation: "In collaboration with Assistant Professor at IUST Awantipora, J&K",
+    stack: ["Time-Series Analysis", "Python", "Scikit-Learn", "TensorFlow/PyTorch", "XGBoost", "Gaussian Processes", "1D-CNNs & LSTMs", "Signal Processing (PSD)", "SMOTE"],
+    summary: "Spearheading ML research on transient astronomical light curves in collaboration with an Assistant Professor at IUST Awantipora, engineering end-to-end classification architectures for X-ray binary spectral states.",
+    achievements: [
+      "Designed and implemented an end-to-end machine learning pipeline to predict the physical spectral states of transient astronomical sources (e.g., X-ray binaries) based on dynamic temporal flux variations.",
+      "Engineered robust data ingestion workflows for noisy, irregular astronomical light curves, utilizing Gaussian Processes (GPs) to smoothly interpolate missing data points across observational gaps and regularizing sequences via sliding-window segmentation.",
+      "Extracted multi-dimensional physical features from raw time-series data, computing multi-band hardness ratios (color), fractional RMS variability, and Power Spectral Density (PSD) to capture both frequency and time-domain signals.",
+      "Architected and trained dual-approach predictive models, utilizing tree-based algorithms (XGBoost/Random Forest) for feature-engineered datasets and deep sequence models (1D-CNNs and LSTMs) to automatically detect morphological patterns and long-term evolutionary trends in raw flux.",
+      "Addressed severe class imbalances inherent in transient state durations (e.g., prolonged quiescence vs. brief intermediate states) by implementing SMOTE (Synthetic Minority Over-sampling Technique) and custom class-weighted loss functions.",
+      "Established strict chronological and source-isolated validation splitting to prevent temporal data leakage, evaluating pipeline efficacy using F1-scores and domain-contextualized confusion matrices to minimize physically critical misclassifications."
+    ]
+  },
   {
     id: "legal-case-mgmt",
     role: "Full-Stack System Architect & Engineer",
@@ -135,6 +160,33 @@ export const experienceData = [
 ];
 
 export const projectsData = [
+  {
+    id: "astrophysics-transient-pipeline",
+    title: "Time-Series Classification Pipeline for Transient Source Spectral States",
+    category: "Machine Learning & Astrophysics",
+    role: "Machine Learning Researcher / Engineer",
+    affiliation: "In collaboration with Assistant Professor at IUST Awantipora, J&K",
+    period: "Research Project",
+    tagline: "Predicting physical spectral states of X-ray binary transients via Gaussian Processes, 1D-CNNs/LSTMs, and XGBoost.",
+    badge: "Astrophysics ML 🔭",
+    badgeColor: "bg-[#9D4EDD] text-white",
+    technologies: ["Time-Series Analysis", "Python", "Scikit-Learn", "TensorFlow/PyTorch", "XGBoost", "Gaussian Processes", "1D-CNNs", "LSTMs", "Signal Processing (PSD)", "SMOTE"],
+    metrics: [
+      { label: "Pipeline Approach", value: "Dual ML", subtext: "Tree (XGB) + Deep Sequence (CNN/LSTM)" },
+      { label: "Signal Processing", value: "GP + PSD", subtext: "Gaussian Process gap interpolation" },
+      { label: "Validation Strategy", value: "0% Leakage", subtext: "Chronological & source-isolated splits" }
+    ],
+    details: [
+      "Designed and implemented an end-to-end machine learning pipeline to predict the physical spectral states of transient astronomical sources (e.g., X-ray binaries) based on dynamic temporal flux variations.",
+      "Engineered robust data ingestion workflows for noisy, irregular astronomical light curves, utilizing Gaussian Processes (GPs) to smoothly interpolate missing data points across observational gaps and regularizing sequences via sliding-window segmentation.",
+      "Extracted multi-dimensional physical features from raw time-series data, computing multi-band hardness ratios (color), fractional RMS variability, and Power Spectral Density (PSD) to capture both frequency and time-domain signals.",
+      "Architected and trained dual-approach predictive models, utilizing tree-based algorithms (XGBoost/Random Forest) for feature-engineered datasets and deep sequence models (1D-CNNs and LSTMs) to automatically detect morphological patterns and long-term evolutionary trends in raw flux.",
+      "Addressed severe class imbalances inherent in transient state durations (e.g., prolonged quiescence vs. brief intermediate states) by implementing SMOTE (Synthetic Minority Over-sampling Technique) and custom class-weighted loss functions.",
+      "Established strict chronological and source-isolated validation splitting to prevent temporal data leakage, evaluating pipeline efficacy using F1-scores and domain-contextualized confusion matrices to minimize physically critical misclassifications."
+    ],
+    demoType: "astro-transient",
+    github: "https://github.com/RAB025"
+  },
   {
     id: "chrome-data-automation",
     title: "Data Automation Chrome Extension",

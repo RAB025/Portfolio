@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
-import { Sparkles, ExternalLink, Github, Zap, Shield, FileText, CheckCircle2, ArrowRight, Layers, Sliders } from 'lucide-react';
+import { Sparkles, ExternalLink, Github, Zap, Shield, FileText, CheckCircle2, ArrowRight, Layers, Sliders, Telescope } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
 import { DomSimulator } from '../components/DomSimulator';
 import { RiskGraphSimulator } from '../components/RiskGraphSimulator';
+import { AstroTransientSimulator } from '../components/AstroTransientSimulator';
 import { playClick, playPop } from '../utils/audio';
 
 export const Projects = () => {
   const [filter, setFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'All Projects (3)' },
+    { id: 'all', label: 'All Projects (4)' },
+    { id: 'astrophysics', label: 'Astrophysics & ML' },
     { id: 'automation', label: 'DOM & Automation' },
     { id: 'security', label: 'AI & Security Graphs' },
     { id: 'fullstack', label: 'Full-Stack Systems' }
   ];
 
   const filteredProjects = projectsData.filter((project) => {
+    if (filter === 'astrophysics') return project.id === 'astrophysics-transient-pipeline';
     if (filter === 'automation') return project.id === 'chrome-data-automation';
     if (filter === 'security') return project.id === 'security-risk-platform';
     if (filter === 'fullstack') return project.id === 'legal-case-system';
@@ -84,6 +87,12 @@ export const Projects = () => {
                   <span className="font-mono text-xs font-semibold text-gray-500">
                     {project.category}
                   </span>
+                  {project.affiliation && (
+                    <span className="font-mono text-xs font-bold bg-[#9D4EDD] text-white px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000] flex items-center gap-1">
+                      <Telescope size={12} />
+                      <span>{project.affiliation}</span>
+                    </span>
+                  )}
                 </div>
                 <h2 className="text-2xl sm:text-4xl font-black tracking-tight">{project.title}</h2>
                 <p className="text-gray-700 font-medium text-base">{project.tagline}</p>
@@ -147,6 +156,12 @@ export const Projects = () => {
             </div>
 
             {/* Embedded Live Interactive Simulators */}
+            {project.demoType === 'astro-transient' && (
+              <div className="pt-4 border-t-3 border-black">
+                <AstroTransientSimulator />
+              </div>
+            )}
+
             {project.demoType === 'dom-speedup' && (
               <div className="pt-4 border-t-3 border-black">
                 <DomSimulator />

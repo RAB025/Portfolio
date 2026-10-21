@@ -242,7 +242,7 @@ export const Home = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projectsData.map((project) => (
             <div
               key={project.id}

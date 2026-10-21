@@ -95,9 +95,14 @@ export const Experience = () => {
 
                   <h2 className="text-2xl font-black tracking-tight">{exp.role}</h2>
                   <div className="text-base font-extrabold text-gray-800 flex items-center gap-2">
-                    {exp.id === 'iit-tirupati' ? <GraduationCap size={18} /> : <Building size={18} />}
+                    {exp.id === 'iit-tirupati' || exp.id === 'iust-astrophysics-ml' ? <GraduationCap size={18} /> : <Building size={18} />}
                     <span>{exp.company}</span>
                   </div>
+                  {exp.affiliation && (
+                    <div className="text-xs font-mono font-bold text-[#9D4EDD] bg-purple-50 px-2 py-0.5 border border-[#9D4EDD] inline-block mt-1">
+                      🔬 {exp.affiliation}
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-3 self-end md:self-auto">
