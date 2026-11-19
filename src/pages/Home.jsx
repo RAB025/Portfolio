@@ -49,9 +49,9 @@ export const Home = () => {
 
             {/* Subtitle / Bio */}
             <p className="text-lg sm:text-xl font-medium text-gray-800 max-w-2xl leading-relaxed">
-              I’m <strong>{personalInfo.name}</strong>, a Senior Technical Lead and Full-Stack Engineer. 
-              I specialize in scaling Python & Java enterprise microservices, conquering difficult browser DOM barriers, 
-              and extracting anomalies from 65K+ record graph datasets.
+              I’m <strong>{personalInfo.name}</strong>, a Senior Technical Lead, Full-Stack & Android Systems Engineer. 
+              I architect high-performance distributed backends, offline cryptographic RPA suites, 3D WebGL structural platforms, 
+              and time-series astrophysics machine learning pipelines.
             </p>
 
             {/* Interactive Call to Actions */}
@@ -116,16 +116,16 @@ export const Home = () => {
               {/* Status List */}
               <div className="bg-white p-3 border-2 border-black text-left text-xs font-mono space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Current Role:</span>
-                  <span className="font-bold text-black">Full-Stack Lead</span>
+                  <span className="text-gray-600">Active Work:</span>
+                  <span className="font-bold text-[#70FF00] bg-black px-1.5 py-0.2">Ni-Kshay Suite ⚡</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Enterprise XP:</span>
                   <span className="font-bold text-black">3+ Yrs at HCL Tech</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Vibe:</span>
-                  <span className="font-bold text-[#FF2A85]">High Energy & Quirky</span>
+                  <span className="text-gray-600">Domains:</span>
+                  <span className="font-bold text-[#FF2A85]">Android • RPA • 3D • ML</span>
                 </div>
               </div>
 
@@ -185,7 +185,7 @@ export const Home = () => {
           <h2 className="text-3xl font-black tracking-tight">Enterprise Backbone Meets Hacker Precision</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <div className="neo-box bg-white p-6 space-y-3">
             <div className="w-12 h-12 bg-[#FFE600] border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
@@ -193,30 +193,38 @@ export const Home = () => {
             </div>
             <h3 className="font-black text-xl">Scalable Backend Architecture</h3>
             <p className="text-gray-700 text-sm leading-relaxed font-medium">
-              Over 3 years of leading technical squads at <strong>HCL Tech</strong>, building resilient Java & Python REST microservices, 
-              orchestrating clean async processing pipelines, and slashing testing cycles by 40%.
+              Over 3 years leading squads at <strong>HCL Tech</strong>, building resilient Java & Python REST microservices, 
+              orchestrating async pipelines, and slashing testing cycles by 40%.
             </p>
           </div>
 
           <div className="neo-box bg-white p-6 space-y-3">
             <div className="w-12 h-12 bg-[#70FF00] border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
-              ⚡
+              🤖
             </div>
-            <h3 className="font-black text-xl">DOM Engineering & Extensions</h3>
+            <h3 className="font-black text-xl">Android Systems & Dual-RPA</h3>
             <p className="text-gray-700 text-sm leading-relaxed font-medium">
-              When complex reactive frameworks (like Vue.js) lock down forms, I engineer asynchronous DOM-polling algorithms 
-              and synthetic event injectors that cut task execution times by 60%.
+              Architecting native Kotlin foreground daemons and Chromium MV3 extensions, overcoming Android background limits and React Fiber / Angular DOM traps with ~95% speedups.
+            </p>
+          </div>
+
+          <div className="neo-box bg-white p-6 space-y-3">
+            <div className="w-12 h-12 bg-[#FF2A85] text-white border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
+              🔑
+            </div>
+            <h3 className="font-black text-xl">Decentralized Cryptography</h3>
+            <p className="text-gray-700 text-sm leading-relaxed font-medium">
+              Engineering offline-first HMAC-SHA256 licensing protocols via Web Crypto API, delivering zero-cost token verification and 100% client-side privacy without cloud databases.
             </p>
           </div>
 
           <div className="neo-box bg-white p-6 space-y-3">
             <div className="w-12 h-12 bg-[#00F0FF] border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
-              🧠
+              🏢
             </div>
-            <h3 className="font-black text-xl">AI & Graph Intelligence</h3>
+            <h3 className="font-black text-xl">3D Graphics & Engineering Mechanics</h3>
             <p className="text-gray-700 text-sm leading-relaxed font-medium">
-              Google Vertex AI Certified. Ingesting, cleansing, and mapping 65,000+ records with Pandas and NetworkX community detection 
-              to surface critical anomalies and ground LLM answers in verifiable truth.
+              Building 60 FPS Three.js WebGL building modelers and automated IS 456 / IS 1893 structural engines using React 19, FastAPI, and NumPy.
             </p>
           </div>
 
@@ -243,7 +251,7 @@ export const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projectsData.map((project) => (
+          {projectsData.slice(0, 4).map((project) => (
             <div
               key={project.id}
               className="neo-box bg-white p-6 flex flex-col justify-between space-y-4"

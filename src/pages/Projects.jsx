@@ -1,27 +1,37 @@
 import React, { useState } from 'react';
-import { Sparkles, ExternalLink, Github, Zap, Shield, FileText, CheckCircle2, ArrowRight, Layers, Sliders, Telescope } from 'lucide-react';
+import { Sparkles, ExternalLink, Github, Zap, Shield, FileText, CheckCircle2, ArrowRight, Layers, Sliders, Telescope, Smartphone, Box } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
 import { DomSimulator } from '../components/DomSimulator';
 import { RiskGraphSimulator } from '../components/RiskGraphSimulator';
 import { AstroTransientSimulator } from '../components/AstroTransientSimulator';
+import { NikshaySimulator } from '../components/NikshaySimulator';
+import { StrucEngineSimulator } from '../components/StrucEngineSimulator';
 import { playClick, playPop } from '../utils/audio';
 
 export const Projects = () => {
   const [filter, setFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'All Projects (4)' },
-    { id: 'astrophysics', label: 'Astrophysics & ML' },
-    { id: 'automation', label: 'DOM & Automation' },
-    { id: 'security', label: 'AI & Security Graphs' },
+    { id: 'all', label: 'All Projects (7)' },
+    { id: 'healthcare', label: 'Healthcare & RPA' },
+    { id: 'structural', label: '3D & Structural SaaS' },
+    { id: 'ai', label: 'AI & Astrophysics' },
     { id: 'fullstack', label: 'Full-Stack Systems' }
   ];
 
   const filteredProjects = projectsData.filter((project) => {
-    if (filter === 'astrophysics') return project.id === 'astrophysics-transient-pipeline';
-    if (filter === 'automation') return project.id === 'chrome-data-automation';
-    if (filter === 'security') return project.id === 'security-risk-platform';
-    if (filter === 'fullstack') return project.id === 'legal-case-system';
+    if (filter === 'healthcare') {
+      return ['nikshay-suite', 'janani-hbnc-autopilot', 'ncd-manager-extension'].includes(project.id);
+    }
+    if (filter === 'structural') {
+      return project.id === 'strucengine-3d-saas';
+    }
+    if (filter === 'ai') {
+      return ['astrophysics-transient-pipeline', 'security-risk-platform'].includes(project.id);
+    }
+    if (filter === 'fullstack') {
+      return project.id === 'legal-case-system';
+    }
     return true;
   });
 
@@ -156,6 +166,18 @@ export const Projects = () => {
             </div>
 
             {/* Embedded Live Interactive Simulators */}
+            {project.demoType === 'nikshay-sim' && (
+              <div className="pt-4 border-t-3 border-black">
+                <NikshaySimulator />
+              </div>
+            )}
+
+            {project.demoType === 'strucengine-sim' && (
+              <div className="pt-4 border-t-3 border-black">
+                <StrucEngineSimulator />
+              </div>
+            )}
+
             {project.demoType === 'astro-transient' && (
               <div className="pt-4 border-t-3 border-black">
                 <AstroTransientSimulator />

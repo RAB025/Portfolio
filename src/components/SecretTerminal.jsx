@@ -52,20 +52,25 @@ export const SecretTerminal = () => {
 
       case 'skills':
         response = [
-          { text: "LANGUAGES: Python (Expert), Java (Enterprise), JavaScript (DOM/React), SQL", type: "output" },
-          { text: "BACKEND: Django, Flask, REST APIs, ReportLab PDF, RBAC, Async Workers", type: "output" },
-          { text: "FRONTEND: React (Vite), Material UI, Chrome Extensions, Dynamic DOM", type: "output" },
-          { text: "AI & DATA: Google Vertex AI, Pandas, NumPy, NetworkX, Prompt Engineering", type: "output" },
-          { text: "DEVOPS: AWS (Lightsail, S3, CloudFront), Nginx, GitHub Actions, CI/CD", type: "output" }
+          { text: "LANGUAGES: Python (95%), Kotlin (90%), JavaScript/ES6+ (94%), Java (88%), SQL", type: "output" },
+          { text: "MOBILE & ANDROID: Android SDK (24-34), Foreground Services, WakeLocks, MediaStore, Dual-WebView", type: "output" },
+          { text: "RPA & EXTENSIONS: Manifest V3, React Fiber Traversal, Prototype Descriptors, Angular DOM, SheetJS", type: "output" },
+          { text: "CRYPTOGRAPHY: Web Crypto API (SubtleCrypto), Offline HMAC-SHA256 Signed Tokens (NKA1), Base64URL", type: "output" },
+          { text: "3D & COMPUTATIONAL: Three.js (WebGL), NumPy, Hardy Cross FEM, IS 456 Redistribution, IS 1893 Seismic", type: "output" },
+          { text: "AI & ML: Time-Series, Gaussian Processes, 1D-CNNs, LSTMs, XGBoost, Vertex AI, NetworkX, Pandas", type: "output" },
+          { text: "BACKEND & CLOUD: FastAPI, Django, REST APIs, ReportLab PDF, AWS, Nginx, CI/CD, Pytest", type: "output" }
         ];
         break;
 
       case 'projects':
         response = [
-          { text: "1. TIME-SERIES TRANSIENT SPECTRAL CLASSIFICATION (IUST Awantipora): ML pipeline for X-ray binaries via Gaussian Processes, 1D-CNN/LSTM & XGBoost.", type: "output" },
-          { text: "2. DATA AUTOMATION CHROME EXTENSION: Slashed healthcare task time by 60% (~60s to ~20s) bypassing Vue.js boundaries.", type: "output" },
-          { text: "3. SECURITY RISK INTELLIGENCE: 65K+ records, NetworkX graph communities & LLM explainability.", type: "output" },
-          { text: "4. LEGAL CASE MANAGEMENT SYSTEM: React + Django, automated cause list, custom react-pdf viewer, ReportLab.", type: "output" }
+          { text: "1. NI-KSHAY AUTOMATION SUITE [PRESENTLY WORKING ON]: Dual-platform Android & Chromium MV3 with offline HMAC-SHA256 licensing for India's NTEP.", type: "output" },
+          { text: "2. JANANI HBNC AUTO-PILOT: Zero-dep client-side RPA web extension automating 39-step entries on MOHFW Janani Portal via React Fiber.", type: "output" },
+          { text: "3. STRUCENGINE: Cloud-native 3D WebGL building modeler & IS 456 moment redistribution SaaS (FastAPI + NumPy, 24 unit tests).", type: "output" },
+          { text: "4. NCD MANAGER: Chrome MV3 extension automating screening & 36-char UUID registration on India's National NCD Portal.", type: "output" },
+          { text: "5. TRANSIENT SPECTRAL CLASSIFICATION (IUST Awantipora): ML pipeline for X-ray binaries with Gaussian Processes & 1D-CNN/LSTM.", type: "output" },
+          { text: "6. SECURITY RISK INTELLIGENCE: 65K+ records, NetworkX graph communities & LLM explainability.", type: "output" },
+          { text: "7. LEGAL CASE MANAGEMENT SYSTEM: React + Django, automated cause list, custom react-pdf viewer, ReportLab.", type: "output" }
         ];
         break;
 

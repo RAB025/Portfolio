@@ -3,10 +3,10 @@ import { playPop, playBoing } from '../utils/audio';
 
 export const FloatingStickers = () => {
   const stickers = [
-    { text: "⚡ IIT TIRUPATI", rotate: "-rotate-6", bg: "bg-[#FFE600]", top: "top-24", left: "left-2 sm:left-6" },
-    { text: "🔥 60% SPEEDUP", rotate: "rotate-6", bg: "bg-[#70FF00]", top: "top-48", right: "right-2 sm:right-8" },
-    { text: "🐍 PYTHON LEAD", rotate: "-rotate-3", bg: "bg-[#00F0FF]", top: "top-[40rem]", left: "left-2 sm:left-4" },
-    { text: "🧠 VERTEX AI", rotate: "rotate-12", bg: "bg-[#FF6584] text-white", top: "top-[58rem]", right: "right-2 sm:right-6" }
+    { text: "⚡ NI-KSHAY SUITE (ACTIVE)", rotate: "-rotate-6", bg: "bg-[#70FF00]", top: "top-24", left: "left-2 sm:left-6" },
+    { text: "🏢 STRUCENGINE 3D", rotate: "rotate-6", bg: "bg-[#00F0FF]", top: "top-48", right: "right-2 sm:right-8" },
+    { text: "🏥 JANANI 39-STEP RPA", rotate: "-rotate-3", bg: "bg-[#FFE600]", top: "top-[40rem]", left: "left-2 sm:left-4" },
+    { text: "🔭 IUST ASTROPHYSICS ML", rotate: "rotate-12", bg: "bg-[#9D4EDD] text-white", top: "top-[58rem]", right: "right-2 sm:right-6" }
   ];
 
   return (

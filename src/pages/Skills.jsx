@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wrench, Terminal, Cpu, Database, Server, Layout, Sparkles, Bug, Trophy, Zap, Cloud } from 'lucide-react';
+import { Wrench, Terminal, Cpu, Database, Server, Layout, Sparkles, Bug, Trophy, Zap, Cloud, Smartphone, Box, ShieldCheck, Key } from 'lucide-react';
 import { skillsData } from '../data/portfolioData';
 import { playClick, playPop, playSuccess, playBoing } from '../utils/audio';
 import { triggerConfetti } from '../utils/confetti';
@@ -21,9 +21,12 @@ export const Skills = () => {
   const tabs = [
     { id: 'all', label: 'All Stack', icon: Wrench },
     { id: 'languages', label: 'Languages', icon: Terminal },
+    { id: 'mobileAndroid', label: 'Android & Mobile', icon: Smartphone },
+    { id: 'extensionsRPA', label: 'Extensions & RPA', icon: Layout },
+    { id: 'securityCrypto', label: 'Security & Crypto', icon: Key },
+    { id: 'engineering3D', label: '3D & Structural', icon: Box },
+    { id: 'aiData', label: 'AI, ML & Astrophysics', icon: Cpu },
     { id: 'backend', label: 'Backend Architecture', icon: Server },
-    { id: 'frontend', label: 'Frontend & Extensions', icon: Layout },
-    { id: 'aiData', label: 'AI & Data Intelligence', icon: Cpu },
     { id: 'cloudDevOps', label: 'Cloud & DevOps', icon: Cloud },
   ];
 
@@ -34,7 +37,7 @@ export const Skills = () => {
       <section className="space-y-4 border-b-4 border-black pb-8">
         <div className="inline-flex items-center gap-2 bg-[#70FF00] px-3 py-1 font-mono font-black text-xs uppercase border-2 border-black shadow-[2px_2px_0px_#000]">
           <Cpu size={14} />
-          <span>The Tech Matrix</span>
+          <span>The Expanded Tech Matrix</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight">
@@ -42,8 +45,8 @@ export const Skills = () => {
         </h1>
 
         <p className="text-gray-700 text-lg max-w-3xl font-medium leading-relaxed">
-          From writing high-throughput Python backends and enterprise Java to precision Chrome DOM manipulation 
-          and Google Vertex AI prompt architectures. Here is the full technical matrix.
+          From Android Kotlin systems, background daemons, and offline HMAC cryptography to 3D WebGL structural mechanics, 
+          client-side browser RPA, and astrophysics ML pipelines.
         </p>
 
         {/* Tab Filters */}
@@ -102,7 +105,7 @@ export const Skills = () => {
             <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Core Programming Languages</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {skillsData.languages.map((lang, idx) => (
               <div
                 key={idx}
@@ -127,6 +130,116 @@ export const Skills = () => {
         </div>
       )}
 
+      {/* Mobile & Android Systems */}
+      {(activeTab === 'all' || activeTab === 'mobileAndroid') && skillsData.mobileAndroid && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-[#70FF00] border border-black"></span>
+            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Native Android & Mobile Systems Engineering</h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {skillsData.mobileAndroid.map((item, idx) => (
+              <div
+                key={idx}
+                className="neo-box bg-white p-4 space-y-1 hover:bg-[#70FF00]/10"
+              >
+                <div className="font-mono text-[10px] font-black uppercase text-green-700">{item.tag}</div>
+                <h3 className="font-black text-base">{item.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Browser Extensions & RPA */}
+      {(activeTab === 'all' || activeTab === 'extensionsRPA') && skillsData.extensionsRPA && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-[#00F0FF] border border-black"></span>
+            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Client-Side RPA & Chromium Extension Engineering</h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {skillsData.extensionsRPA.map((item, idx) => (
+              <div
+                key={idx}
+                className="neo-box bg-white p-4 space-y-1 hover:bg-[#00F0FF]/10"
+              >
+                <div className="font-mono text-[10px] font-black uppercase text-blue-700">{item.tag}</div>
+                <h3 className="font-black text-base">{item.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Security & Cryptography */}
+      {(activeTab === 'all' || activeTab === 'securityCrypto') && skillsData.securityCrypto && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-[#FF2A85] border border-black"></span>
+            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Cryptography, Privacy & Security Protocols</h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+            {skillsData.securityCrypto.map((item, idx) => (
+              <div
+                key={idx}
+                className="neo-box bg-[#FFFDF9] p-4 space-y-1 border-3 border-black hover:bg-[#FFE600]"
+              >
+                <div className="font-mono text-[10px] font-black uppercase text-[#FF2A85]">{item.tag}</div>
+                <h3 className="font-black text-base">{item.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 3D Graphics & Structural Engineering */}
+      {(activeTab === 'all' || activeTab === 'engineering3D') && skillsData.engineering3D && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-[#FFE600] border border-black"></span>
+            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">3D WebGL Graphics & Computational Mechanics</h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {skillsData.engineering3D.map((item, idx) => (
+              <div
+                key={idx}
+                className="neo-box bg-white p-4 space-y-1 hover:bg-amber-50"
+              >
+                <div className="font-mono text-[10px] font-black uppercase text-[#FF7B00]">{item.tag}</div>
+                <h3 className="font-black text-base">{item.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* AI, ML & Astrophysics */}
+      {(activeTab === 'all' || activeTab === 'aiData') && (
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-[#9D4EDD] border border-black"></span>
+            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">AI, Machine Learning & Astrophysics</h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+            {skillsData.aiData.map((item, idx) => (
+              <div
+                key={idx}
+                className="neo-box bg-[#FFFDF9] p-5 space-y-1 border-3 border-black hover:bg-[#9D4EDD]/10"
+              >
+                <div className="font-mono text-[10px] font-black uppercase text-[#9D4EDD]">{item.tag}</div>
+                <h3 className="font-black text-lg">{item.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Backend & Architecture */}
       {(activeTab === 'all' || activeTab === 'backend') && (
         <div className="space-y-4">
@@ -135,59 +248,13 @@ export const Skills = () => {
             <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Backend Engineering & Systems</h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
             {skillsData.backend.map((item, idx) => (
               <div
                 key={idx}
                 className="neo-box bg-white p-4 space-y-1 hover:bg-[#FFF9F0]"
               >
                 <div className="font-mono text-[10px] font-black uppercase text-[#FF6584]">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* AI & Data */}
-      {(activeTab === 'all' || activeTab === 'aiData') && (
-        <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#00F0FF] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">AI, Data & Graph Analytics</h2>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
-            {skillsData.aiData.map((item, idx) => (
-              <div
-                key={idx}
-                className="neo-box bg-[#FFFDF9] p-5 space-y-1 border-3 border-black hover:bg-[#FFE600]"
-              >
-                <div className="font-mono text-[10px] font-black uppercase text-blue-700">{item.tag}</div>
-                <h3 className="font-black text-lg">{item.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Frontend & Browser Automation */}
-      {(activeTab === 'all' || activeTab === 'frontend') && (
-        <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#70FF00] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Frontend & Browser DOM Engineering</h2>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
-            {skillsData.frontend.map((item, idx) => (
-              <div
-                key={idx}
-                className="neo-box bg-white p-4 space-y-1 hover:bg-lime-50"
-              >
-                <div className="font-mono text-[10px] font-black uppercase text-[#70FF00] bg-black px-1.5 py-0.5 inline-block">
-                  {item.tag}
-                </div>
                 <h3 className="font-black text-base">{item.name}</h3>
               </div>
             ))}
@@ -203,7 +270,7 @@ export const Skills = () => {
             <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Cloud Infrastructure & DevOps</h2>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsData.cloudDevOps.map((item, idx) => (
               <div
                 key={idx}
@@ -222,7 +289,7 @@ export const Skills = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 bg-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Tools, Testing & Methodologies</h2>
+            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Tools, Testing & Diagnostics</h2>
           </div>
 
           <div className="flex flex-wrap gap-3">
@@ -243,4 +310,3 @@ export const Skills = () => {
     </div>
   );
 };
-
