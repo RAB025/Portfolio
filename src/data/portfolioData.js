@@ -111,15 +111,15 @@ export const experienceData = [
   {
     id: "nikshay-suite-lead",
     role: "Full-Stack & Android Systems Engineer",
-    company: "Ni-Kshay Automation & Management Suite (NTEP)",
+    company: "Ni-Kshay Automation & Management Suite",
     period: "Presently Working On",
     badge: "Presently Working On ⚡",
     badgeColor: "bg-[#70FF00] text-black",
-    location: "Remote / National Scale",
+    location: "Private Client (Healthcare)",
     stack: ["Kotlin", "Android SDK", "Foreground Services", "Dual-WebView", "Chromium MV3", "Web Crypto API", "HMAC-SHA256", "MediaStore", "SheetJS"],
-    summary: "Architecting a dual-platform automation, diagnostic reporting, and cryptographic licensing ecosystem for the National Tuberculosis Elimination Programme (NTEP), cutting registration times by ~95% with zero cloud server expenses.",
+    summary: "Architecting a dual-platform automation, diagnostic reporting, and cryptographic licensing ecosystem for a private singular healthcare client, cutting registration times by ~95% with zero cloud server expenses.",
     achievements: [
-      "Architected and deployed a dual-platform healthcare automation suite (Native Android Kotlin & Chromium Manifest V3) for India’s National Tuberculosis Elimination Programme (NTEP), slashing manual screening and diagnostic entry duration by ~95% (from 3–5 minutes down to seconds per record).",
+      "Architected and deployed a dual-platform healthcare automation suite (Native Android Kotlin & Chromium Manifest V3) for a private singular client, slashing manual screening and diagnostic entry duration by ~95% (from 3–5 minutes down to seconds per record).",
       "Engineered an offline-first cryptographic licensing engine using symmetric HMAC-SHA256 signed tokens (NKA1 format via Web Crypto API), enabling decentralized, tamper-proof license generation and offline validation with zero recurring cloud database expenses.",
       "Developed a dual-WebView hybrid Android runtime (MainActivity.kt) featuring an embedded virtual HTTPS asset server (AssetServer.kt) and bidirectional JavaScript bridge, polyfilling Chrome Extension APIs to native Kotlin storage and background services.",
       "Overcame aggressive Android 14+ background execution and Chromium timer throttling by engineering a persistent Foreground Service (FOREGROUND_SERVICE_DATA_SYNC), CPU PARTIAL_WAKE_LOCK, and a native 2.5-second V8 heartbeat looper.",
@@ -208,7 +208,7 @@ export const projectsData = [
     category: "Healthcare Informatics & Android RPA",
     role: "Full-Stack & Android Systems Engineer",
     period: "Presently Working On",
-    tagline: "Dual-platform native Android (Kotlin) & Chromium MV3 automation with decentralized HMAC-SHA256 licensing for India's NTEP.",
+    tagline: "Dual-platform native Android (Kotlin) & Chromium MV3 automation with decentralized HMAC-SHA256 licensing engineered for a private healthcare client.",
     badge: "Presently Working On ⚡",
     badgeColor: "bg-[#70FF00] text-black",
     technologies: ["Kotlin", "Android SDK (API 24-34)", "Foreground Service", "Chromium Manifest V3", "Web Crypto API", "HMAC-SHA256", "MediaStore Scoped Storage", "SheetJS", "Dual-WebView"],
@@ -218,7 +218,7 @@ export const projectsData = [
       { label: "OS Security Footprint", value: "Zero Perms", subtext: "0 dangerous Android permissions" }
     ],
     details: [
-      "Architected and deployed a dual-platform healthcare automation suite (Native Android Kotlin & Chromium Manifest V3) for India’s National Tuberculosis Elimination Programme (NTEP), slashing manual registration and diagnostic entry time by ~95%.",
+      "Architected and deployed a dual-platform healthcare automation suite (Native Android Kotlin & Chromium Manifest V3) for a private singular healthcare client, slashing manual registration and diagnostic entry time on the Ni-Kshay portal by ~95%.",
       "Engineered an offline-first cryptographic licensing engine using symmetric HMAC-SHA256 signed tokens (NKA1 format via Web Crypto API), enabling decentralized, tamper-proof license generation and offline validation without cloud databases.",
       "Developed a dual-WebView hybrid Android runtime (MainActivity.kt) featuring an embedded virtual HTTPS asset server (AssetServer.kt) and bidirectional JavaScript bridge, polyfilling Chrome Extension APIs to native Kotlin storage.",
       "Overcame aggressive Android 14+ background execution and Chromium timer throttling by implementing a persistent Foreground Service (FOREGROUND_SERVICE_DATA_SYNC), CPU PARTIAL_WAKE_LOCK, and a native 2.5-second V8 heartbeat looper.",

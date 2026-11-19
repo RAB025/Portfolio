@@ -67,7 +67,7 @@ export const NikshaySimulator = () => {
             Ni-Kshay Dual-Platform RPA & Cryptographic Licensing Engine
           </h3>
           <p className="text-gray-700 text-sm font-medium">
-            National Tuberculosis Elimination Programme (NTEP) • Kotlin Android Native + Chromium Manifest V3.
+            Private Client Healthcare Suite • Kotlin Android Native + Chromium Manifest V3.
           </p>
         </div>
 
