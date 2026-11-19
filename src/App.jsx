@@ -23,16 +23,23 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-[#FFFDF9] text-[#121214] font-sans selection:bg-black selection:text-[#FFE600] relative pattern-grid">
+      <div className="min-h-screen flex flex-col bg-[#FAFAF8] text-[#0F172A] font-sans selection:bg-[#0F172A] selection:text-[#FFE600] relative pattern-grid overflow-x-hidden">
         
-        {/* Playful Floating Badges */}
+        {/* Fluid Ambient Lighting Accents */}
+        <div className="pointer-events-none fixed inset-0 overflow-hidden z-0">
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-cyan-200/40 rounded-full blur-[128px] animate-pulse"></div>
+          <div className="absolute top-1/3 -right-40 w-[30rem] h-[30rem] bg-amber-200/30 rounded-full blur-[140px]"></div>
+          <div className="absolute -bottom-40 left-1/4 w-[32rem] h-[32rem] bg-indigo-200/35 rounded-full blur-[130px]"></div>
+        </div>
+
+        {/* Live Focus Dock */}
         <FloatingStickers />
 
-        {/* Global Navigation Header */}
+        {/* Floating Navigation Header */}
         <Navbar />
 
         {/* Dynamic Page Container */}
-        <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -52,4 +59,3 @@ export default function App() {
     </Router>
   );
 }
-

@@ -25,32 +25,32 @@ export const Skills = () => {
     { id: 'extensionsRPA', label: 'Extensions & RPA', icon: Layout },
     { id: 'securityCrypto', label: 'Security & Crypto', icon: Key },
     { id: 'engineering3D', label: '3D & Structural', icon: Box },
-    { id: 'aiData', label: 'AI, ML & Astrophysics', icon: Cpu },
+    { id: 'aiData', label: 'AI & Astrophysics', icon: Cpu },
     { id: 'backend', label: 'Backend Architecture', icon: Server },
     { id: 'cloudDevOps', label: 'Cloud & DevOps', icon: Cloud },
   ];
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 lg:space-y-16">
       
       {/* Header */}
-      <section className="space-y-4 border-b-4 border-black pb-8">
-        <div className="inline-flex items-center gap-2 bg-[#70FF00] px-3 py-1 font-mono font-black text-xs uppercase border-2 border-black shadow-[2px_2px_0px_#000]">
-          <Cpu size={14} />
-          <span>The Expanded Tech Matrix</span>
+      <section className="space-y-4 pb-4">
+        <div className="inline-flex items-center gap-2 bg-cyan-100 text-cyan-900 border border-cyan-300 px-3 py-1 font-mono font-bold text-xs uppercase rounded-lg shadow-sm">
+          <Cpu size={14} className="text-cyan-700" />
+          <span>Technical Architecture Matrix</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-black tracking-tight">
-          SKILLS & <span className="bg-[#00F0FF] px-3 border-3 border-black shadow-[4px_4px_0px_#000] inline-block rotate-1">ARSENAL</span>
+        <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-900">
+          SKILLS & <span className="bg-[#00F0FF] px-3 py-0.5 rounded-xl border border-slate-900/15 shadow-[3px_3px_0px_#0F172A] inline-block rotate-1 text-slate-950">ARSENAL</span>
         </h1>
 
-        <p className="text-gray-700 text-lg max-w-3xl font-medium leading-relaxed">
+        <p className="text-slate-600 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
           From Android Kotlin systems, background daemons, and offline HMAC cryptography to 3D WebGL structural mechanics, 
           client-side browser RPA, and astrophysics ML pipelines.
         </p>
 
         {/* Tab Filters */}
-        <div className="flex flex-wrap gap-2 pt-4">
+        <div className="flex flex-wrap gap-2 pt-2">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -60,10 +60,10 @@ export const Skills = () => {
                   playClick();
                   setActiveTab(tab.id);
                 }}
-                className={`px-3.5 py-2 font-black text-xs border-2 border-black transition-all flex items-center gap-1.5 ${
+                className={`px-3.5 py-2 font-bold text-xs rounded-xl border transition-all duration-200 flex items-center gap-1.5 ${
                   activeTab === tab.id
-                    ? 'bg-[#FFE600] shadow-[3px_3px_0px_#000] -translate-y-0.5'
-                    : 'bg-white hover:bg-gray-100 shadow-[2px_2px_0px_#000]'
+                    ? 'bg-slate-950 text-white border-slate-950 shadow-md -translate-y-0.5'
+                    : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-200/80 shadow-sm'
                 }`}
               >
                 <Icon size={14} />
@@ -75,25 +75,25 @@ export const Skills = () => {
       </section>
 
       {/* Interactive Bug Smasher Minigame Widget */}
-      <section className="neo-box bg-[#FFE600] p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <section className="neo-box bg-gradient-to-r from-amber-50 via-white to-amber-50 p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-slate-200/80">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-black text-[#FFE600] border-2 border-black flex items-center justify-center font-black text-xl shadow-[2px_2px_0px_#FFF]">
+          <div className="w-10 h-10 bg-slate-900 text-[#FFE600] rounded-xl flex items-center justify-center font-black text-xl shadow-sm">
             👾
           </div>
           <div>
-            <h3 className="font-black text-base">Interactive Bug Squasher</h3>
-            <p className="font-mono text-xs font-bold text-gray-800">
-              Squash production bugs right now! Current Score: <span className="text-[#FF2A85] font-black">{bugsSquashed}</span>
+            <h3 className="font-extrabold text-base text-slate-900">Interactive Runtime Diagnostics</h3>
+            <p className="font-mono text-xs text-slate-600 font-medium">
+              Eliminate production bugs on the fly! Squashed: <span className="text-[#FF2A85] font-black">{bugsSquashed}</span>
             </p>
           </div>
         </div>
 
         <button
           onClick={squashBug}
-          className="neo-btn px-4 py-2 bg-[#FF6584] hover:bg-[#FF2A85] text-white font-black text-xs uppercase flex items-center gap-2 self-start sm:self-auto active:scale-95"
+          className="neo-btn px-4 py-2 bg-[#FF6584] hover:bg-[#FF2A85] text-white font-extrabold text-xs uppercase flex items-center gap-2 self-start sm:self-auto active:scale-95"
         >
           <Bug size={16} />
-          <span>SQUASH A BUG!</span>
+          <span>SQUASH A BUG</span>
         </button>
       </section>
 
@@ -101,8 +101,8 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'languages') && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#FF6584] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Core Programming Languages</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FF6584]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Core Programming Languages</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -113,16 +113,16 @@ export const Skills = () => {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-3xl">{lang.icon}</span>
-                  <span className="font-mono font-black text-xs bg-black text-[#FFE600] px-2 py-0.5">
-                    {lang.level}% Mastery
+                  <span className="font-mono font-bold text-[11px] bg-slate-100 text-slate-800 px-2 py-0.5 rounded">
+                    {lang.level}%
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-black text-xl">{lang.name}</h3>
-                  <p className="font-mono text-xs text-gray-600 font-semibold">{lang.highlight}</p>
+                  <h3 className="font-extrabold text-lg text-slate-900">{lang.name}</h3>
+                  <p className="font-mono text-xs text-slate-500 font-medium">{lang.highlight}</p>
                 </div>
-                <div className="w-full h-3 bg-gray-100 border-2 border-black overflow-hidden">
-                  <div className="h-full bg-[#70FF00]" style={{ width: `${lang.level}%` }}></div>
+                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-full bg-emerald-500 rounded-full" style={{ width: `${lang.level}%` }}></div>
                 </div>
               </div>
             ))}
@@ -134,18 +134,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'mobileAndroid') && skillsData.mobileAndroid && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#70FF00] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Native Android & Mobile Systems Engineering</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#70FF00]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Native Android & Mobile Systems Engineering</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsData.mobileAndroid.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-white p-4 space-y-1 hover:bg-[#70FF00]/10"
+                className="neo-box bg-white p-4 space-y-1 hover:border-emerald-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-green-700">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-emerald-700">{item.tag}</div>
+                <h3 className="font-bold text-sm text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -156,18 +156,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'extensionsRPA') && skillsData.extensionsRPA && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#00F0FF] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Client-Side RPA & Chromium Extension Engineering</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Client-Side RPA & Chromium Extension Engineering</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsData.extensionsRPA.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-white p-4 space-y-1 hover:bg-[#00F0FF]/10"
+                className="neo-box bg-white p-4 space-y-1 hover:border-cyan-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-blue-700">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-cyan-700">{item.tag}</div>
+                <h3 className="font-bold text-sm text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -178,18 +178,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'securityCrypto') && skillsData.securityCrypto && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#FF2A85] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Cryptography, Privacy & Security Protocols</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FF2A85]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Cryptography, Privacy & Security Protocols</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
             {skillsData.securityCrypto.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-[#FFFDF9] p-4 space-y-1 border-3 border-black hover:bg-[#FFE600]"
+                className="neo-box bg-white p-4 space-y-1 hover:border-rose-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-[#FF2A85]">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-rose-600">{item.tag}</div>
+                <h3 className="font-bold text-sm text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -200,18 +200,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'engineering3D') && skillsData.engineering3D && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#FFE600] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">3D WebGL Graphics & Computational Mechanics</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FFE600]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">3D WebGL Graphics & Computational Mechanics</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsData.engineering3D.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-white p-4 space-y-1 hover:bg-amber-50"
+                className="neo-box bg-white p-4 space-y-1 hover:border-amber-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-[#FF7B00]">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-amber-700">{item.tag}</div>
+                <h3 className="font-bold text-sm text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -222,18 +222,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'aiData') && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#9D4EDD] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">AI, Machine Learning & Astrophysics</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#9D4EDD]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">AI, Machine Learning & Astrophysics</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
             {skillsData.aiData.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-[#FFFDF9] p-5 space-y-1 border-3 border-black hover:bg-[#9D4EDD]/10"
+                className="neo-box bg-white p-5 space-y-1 hover:border-purple-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-[#9D4EDD]">{item.tag}</div>
-                <h3 className="font-black text-lg">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-purple-700">{item.tag}</div>
+                <h3 className="font-bold text-base text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -244,18 +244,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'backend') && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#FFE600] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Backend Engineering & Systems</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FFE600]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Backend Engineering & Systems</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
             {skillsData.backend.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-white p-4 space-y-1 hover:bg-[#FFF9F0]"
+                className="neo-box bg-white p-4 space-y-1 hover:border-slate-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-[#FF6584]">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-slate-500">{item.tag}</div>
+                <h3 className="font-bold text-sm text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -266,18 +266,18 @@ export const Skills = () => {
       {(activeTab === 'all' || activeTab === 'cloudDevOps') && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-[#9D4EDD] border border-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Cloud Infrastructure & DevOps</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#9D4EDD]"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Cloud Infrastructure & DevOps</h2>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsData.cloudDevOps.map((item, idx) => (
               <div
                 key={idx}
-                className="neo-box bg-white p-4 space-y-1 hover:bg-purple-50"
+                className="neo-box bg-white p-4 space-y-1 hover:border-purple-400"
               >
-                <div className="font-mono text-[10px] font-black uppercase text-[#9D4EDD]">{item.tag}</div>
-                <h3 className="font-black text-base">{item.name}</h3>
+                <div className="font-mono text-[10px] font-bold uppercase text-purple-700">{item.tag}</div>
+                <h3 className="font-bold text-sm text-slate-900">{item.name}</h3>
               </div>
             ))}
           </div>
@@ -288,19 +288,19 @@ export const Skills = () => {
       {activeTab === 'all' && (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-black"></span>
-            <h2 className="font-mono font-black text-sm uppercase tracking-wider text-gray-700">Tools, Testing & Diagnostics</h2>
+            <span className="w-2.5 h-2.5 rounded-full bg-slate-900"></span>
+            <h2 className="font-mono font-bold text-xs uppercase tracking-wider text-slate-500">Tools, Testing & Diagnostics</h2>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {skillsData.tools.map((tool, idx) => (
               <div
                 key={idx}
-                className="px-4 py-2 bg-white border-2 border-black font-mono font-bold text-xs shadow-[3px_3px_0px_#000] flex items-center gap-2"
+                className="px-3.5 py-1.5 bg-white border border-slate-200 rounded-xl font-mono text-xs shadow-sm flex items-center gap-2 hover:border-slate-400 transition-colors"
               >
-                <span>⚡</span>
-                <span className="text-black font-extrabold">{tool.name}</span>
-                <span className="text-[10px] text-gray-500 font-mono">({tool.tag})</span>
+                <span className="text-emerald-500">⚡</span>
+                <span className="text-slate-900 font-bold">{tool.name}</span>
+                <span className="text-[10px] text-slate-400">({tool.tag})</span>
               </div>
             ))}
           </div>
